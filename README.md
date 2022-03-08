@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Welcome to my personal page!
+Этот сайт был создан для публикации моих проектов в сеть. Рано или поздно тут появятся новые проекты. В основном, мой код открыт и доступен для всех.
 
-You can use the [editor on GitHub](https://github.com/AlexanderLivanov/AlexanderLivanov.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+--
+## Обо мне:
+Меня зовут Санёк и я из Москвы. Я занимаюсь созданием сайтов и игр. В основном игр. Но и сайтов тоже :)
+Как и любой программист, я хочу сделать крутой, большой проект, который понравится многим. 
+Сейчас я занят разработкой игрового движка ZenT Engine для своей будущей игры(логично)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## И это все?
 
-### Markdown
+Конечно, нет :) 
+Как и любой `айтишник`, я начал со слов `Hello, World!`. Конечно, этого никто не видел. Но кому это интересно? Кто это читает? Зачем я это пишу?
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+_Почему, мистер Андерсон, почему? Во имя чего? Что вы делаете? Зачем, зачем встаете? Зачем продолжаете драться? Неужели вы верите в какую-то миссию, или вам просто страшно погибать? Так в чем же миссия, может быть, вы откроете? Это свобода, правда, может быть, мир, или вы боретесь за любовь? Иллюзии, мистер Андерсон, причуды восприятия. Хрупкие логические теории слабого человека, который отчаянно пытается оправдать свое существование — бесцельное и бессмысленное! Но они, мистер Андерсон, как и Матрица, столь же искусственны. Только человек может выдумать скучное и безжизненное понятие "любовь"! Вам пора это увидеть, мистер Андерсон, увидеть и понять! Вы не можете победить, продолжать борьбу бессмысленно. Почему, мистер Андерсон, почему вы упорствуете?
+— Потому что это мой выбор._
 
-```markdown
-Syntax highlighted code block
+-Сильные слова... Как-никак, они мне подходят
 
-# Header 1
-## Header 2
-### Header 3
+## Что я сделал?
+-Много чего. Если я начну перечислять, вы устанете читать. Во вском случае, релизнутых проектов у меня около 5
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AlexanderLivanov/AlexanderLivanov.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+1)UpToUp - игрушка, созданная по тутору в ютубе
+2)CarFootball Online - тоже игрушка, только с мультиплеером. Проста, как сатиновые трусы
+3)ZenT Engine - движок, он еще не готов
+4)RadiaticA - игра на моем движке. Даже не начата...

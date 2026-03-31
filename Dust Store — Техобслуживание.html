@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://agent-69c5d05d04dc5c426-%2Dsplendid-parfait-5b79b9.netlify.app/ -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dust Store — Техобслуживание</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    :root {
+      --primary: #c32178;
+      --secondary: #74155d;
+      --dark: #14041d;
+      --light: #f8f9fa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scrollbar-width: thin;
+      scrollbar-color: #c32178 #230e2d;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, #14041d, #400c4a, #74155d, #c32178);
+      background-attachment: fixed;
+      color: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    .maintenance-wrapper {
+      text-align: center;
+      max-width: 560px;
+      width: 100%;
+      position: relative;
+    }
+
+    .logo {
+      width: 180px;
+      height: auto;
+      margin: 0 auto 30px;
+      display: block;
+      filter: drop-shadow(0 4px 20px rgba(195, 33, 120, 0.4));
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(195, 33, 120, 0.2);
+      border-radius: 15px;
+      padding: 48px 40px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .icon {
+      font-size: 56px;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Press Start 2P', 'Segoe UI', sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      line-height: 1.5;
+      text-shadow: 0 2px 10px rgba(195, 33, 120, 0.3);
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: rgba(248, 249, 250, 0.8);
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .retry {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 12px 30px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .retry:hover {
+      background: #e62e8a;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(195, 33, 120, 0.3);
+    }
+
+    .divider {
+      width: 100px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+      margin: 0 auto 24px;
+    }
+
+    /* Floating particles */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(195, 33, 120, 0.4);
+      border-radius: 50%;
+      animation: rise linear infinite;
+    }
+
+    .particle:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; width: 3px; height: 3px; }
+    .particle:nth-child(2) { left: 25%; animation-duration: 12s; animation-delay: 2s; width: 5px; height: 5px; }
+    .particle:nth-child(3) { left: 40%; animation-duration: 10s; animation-delay: 1s; }
+    .particle:nth-child(4) { left: 55%; animation-duration: 9s; animation-delay: 3s; width: 6px; height: 6px; }
+    .particle:nth-child(5) { left: 70%; animation-duration: 11s; animation-delay: 0.5s; width: 3px; height: 3px; }
+    .particle:nth-child(6) { left: 85%; animation-duration: 7s; animation-delay: 4s; }
+    .particle:nth-child(7) { left: 50%; animation-duration: 13s; animation-delay: 1.5s; width: 5px; height: 5px; }
+    .particle:nth-child(8) { left: 15%; animation-duration: 9s; animation-delay: 2.5s; width: 4px; height: 4px; }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes rise {
+      0% { bottom: -10px; opacity: 0; }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.2; }
+      100% { bottom: 110vh; opacity: 0; }
+    }
+
+    @media (max-width: 480px) {
+      .logo { width: 130px; margin-bottom: 20px; }
+      .card { padding: 32px 20px; }
+      h1 { font-size: 1rem; }
+      p { font-size: 0.95rem; }
+      .retry { padding: 10px 24px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <div class="maintenance-wrapper">
+    <img src="./Dust Store — Техобслуживание_files/logo_new.png" alt="Dust Store" class="logo">
+    <div class="card">
+      <span class="icon">🛠️</span>
+      <h1>Сайт на техобслуживании</h1>
+      <div class="divider"></div>
+      <p>В данный момент сайт временно недоступен в связи с проведением технических работ.</p>
+      <p>Пожалуйста, попробуйте позже.</p>
+      <a class="retry" href="https://agent-69c5d05d04dc5c426--splendid-parfait-5b79b9.netlify.app/" onclick="location.reload(); return false;">Попробовать снова</a>
+    </div>
+  </div>
+
+</body></html>

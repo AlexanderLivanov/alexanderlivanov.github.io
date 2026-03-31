@@ -215,7 +215,10 @@
 <script>
 const TARGET = "https://s.dustore.ru";
 const CACHE_KEY = "dustore_alive";
-const CACHE_TTL = 30000; // 30 секунд
+const CACHE_TTL = 30000;
+
+const loader = document.getElementById("loader");
+const content = document.getElementById("content");
 
 async function checkServer() {
     const cached = localStorage.getItem(CACHE_KEY);
@@ -230,7 +233,7 @@ async function checkServer() {
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 3000);
 
-        const res = await fetch(TARGET, {
+        await fetch(TARGET, {
             method: "HEAD",
             mode: "no-cors",
             signal: controller.signal
@@ -238,17 +241,14 @@ async function checkServer() {
 
         clearTimeout(timeout);
 
-        // no-cors → нельзя прочитать статус, но если не упало — значит жив
-        const isAlive = true;
-
         localStorage.setItem(CACHE_KEY, JSON.stringify({
             time: Date.now(),
-            status: isAlive
+            status: true
         }));
 
-        return isAlive;
+        return true;
 
-    } catch (e) {
+    } catch {
         localStorage.setItem(CACHE_KEY, JSON.stringify({
             time: Date.now(),
             status: false
@@ -259,9 +259,14 @@ async function checkServer() {
 
 (async () => {
     const alive = await checkServer();
+
     if (alive) {
         window.location.href = TARGET;
+        return;
     }
+
+    loader.classList.add("hidden");
+    content.classList.remove("hidden");
 })();
 </script>
 </html>

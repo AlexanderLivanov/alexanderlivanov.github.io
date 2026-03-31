@@ -188,4 +188,58 @@
     </div>
   </div>
 
-</body></html>
+</body>
+<script>
+const TARGET = "https://s.dustore.ru";
+const CACHE_KEY = "dustore_alive";
+const CACHE_TTL = 30000; // 30 секунд
+
+async function checkServer() {
+    const cached = localStorage.getItem(CACHE_KEY);
+    if (cached) {
+        const { time, status } = JSON.parse(cached);
+        if (Date.now() - time < CACHE_TTL) {
+            return status;
+        }
+    }
+
+    try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 3000);
+
+        const res = await fetch(TARGET, {
+            method: "HEAD",
+            mode: "no-cors",
+            signal: controller.signal
+        });
+
+        clearTimeout(timeout);
+
+        // no-cors → нельзя прочитать статус, но если не упало — значит жив
+        const isAlive = true;
+
+        localStorage.setItem(CACHE_KEY, JSON.stringify({
+            time: Date.now(),
+            status: isAlive
+        }));
+
+        return isAlive;
+
+    } catch (e) {
+        localStorage.setItem(CACHE_KEY, JSON.stringify({
+            time: Date.now(),
+            status: false
+        }));
+        return false;
+    }
+}
+
+(async () => {
+    const alive = await checkServer();
+    if (alive) {
+        window.location.href = TARGET;
+    }
+})();
+</script>
+</html>
+
